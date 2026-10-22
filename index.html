@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ku" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SAFAR SHERZAD | فرۆشگای ئۆنلاین</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="mark">S</span><div><strong>SAFAR SHERZAD</strong><small>فرۆشگای ئۆنلاین</small></div></div>
+  <nav><a href="#products">کاڵاکان</a><a href="#about">دەربارە</a><a href="#contact">پەیوەندی</a></nav>
+  <button class="outline" id="ownerBtn">چوونەژوورەوەی Owner</button>
+</header>
+<section class="hero">
+  <div class="hero-copy"><span class="eyebrow">بازاڕی ئۆنلاین ـ کوردستان</span><h1>کاڵای دڵخوازت<br><em>بە ئاسانی</em> بدۆزەرەوە</h1>
+  <p>کاڵای نوێ، نرخە ڕوونەکان و داواکاری بە ئاسانی.</p><a class="primary" href="#products">بینینی کاڵاکان <span>←</span></a></div>
+  <div class="hero-art"><div class="orb"></div><div class="device">S<span>SHOP</span></div><div class="float-card">✦ کاڵای نوێ<br><small>بەردەوام نوێ دەکرێتەوە</small></div></div>
+</section>
+<main>
+  <section class="section-head" id="products"><div><span class="eyebrow">هەڵبژاردەکانمان</span><h2>کاڵاکانی فرۆشگا</h2></div><input id="search" placeholder="گەڕان بە ناوی کاڵا..." aria-label="گەڕان"></section>
+  <div id="status" class="status">کاڵاکان بار دەکرێن...</div><section id="productGrid" class="grid"></section>
+  <section class="about" id="about"><span class="eyebrow">SAFAR SHERZAD</span><h2>کڕین بە شێوەیەکی سادە</h2><p>کاڵاکان ببینە و بۆ داواکردن پەیوەندی بکە. کاڵا نوێیەکان لە داشبۆردی Owner زیاد دەکرێن و لەوێوە بۆ هەموو کڕیاران پیشان دەدرێن.</p></section>
+</main>
+<footer id="contact"><strong>SAFAR SHERZAD</strong><span>پەیوەندی: <a id="emailLink" href="mailto:safarsherzad425@gmail.com">safarsherzad425@gmail.com</a></span><small>© <span id="year"></span> هەموو مافەکان پارێزراون.</small></footer>
+
+<div class="modal hidden" id="loginModal"><div class="dialog"><button class="close" data-close="loginModal">×</button><h2>چوونەژوورەوەی Owner</h2><p>تەنها هەژماری تایبەتی Owner دەتوانێت کاڵاکان بەڕێوەببات.</p><label>ئیمەیڵ<input id="loginEmail" type="email" value="safarsherzad425@gmail.com"></label><label>وشەی نهێنی<input id="loginPassword" type="password" placeholder="وشەی نهێنی"></label><button class="primary full" id="loginBtn">چوونەژوورەوە</button><p class="hint" id="loginHint">پێویستە Supabase لە فایلەکەی app.js ڕێکبخرێت. وشەی نهێنی لەم فایلەدا دانەنراوە.</p></div></div>
+<div class="modal hidden" id="adminModal"><div class="dialog wide"><button class="close" data-close="adminModal">×</button><div class="admin-head"><div><span class="eyebrow">تەنها Owner</span><h2>داشبۆردی بەڕێوەبردن</h2></div><button class="outline" id="logoutBtn">چوونەدەرەوە</button></div><form id="productForm" class="product-form"><input id="productId" type="hidden"><label>ناوی کاڵا<input id="pName" required placeholder="ناوی کاڵا"></label><label>نرخ (دینار)<input id="pPrice" type="number" min="0" required placeholder="25000"></label><label>بەشی کاڵا<input id="pCategory" placeholder="مۆبایل، کۆمپیوتەر..."></label><label>لینکی وێنە<input id="pImage" type="url" placeholder="https://..."></label><label class="span2">وەسفی کاڵا<textarea id="pDescription" rows="3" placeholder="زانیارییەکانی کاڵا"></textarea></label><div class="form-actions span2"><button class="primary" type="submit">پاشەکەوتکردنی کاڵا</button><button class="outline" type="button" id="resetForm">پاککردنەوەی فۆڕم</button></div></form><h3>کاڵاکانی ئێستا</h3><div id="adminProducts" class="admin-products"></div><p class="hint" id="adminHint"></p></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="app.js"></script>
+</body></html>
